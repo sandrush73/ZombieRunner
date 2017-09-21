@@ -48,8 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Assets\Toby Fredson\Rocky Hills Environment - Light Pack\RollerBall\Scripts\Ball.cs" />
      <Compile Include="Assets\Assets\Toby Fredson\Rocky Hills Environment - Light Pack\RollerBall\Scripts\BallUserControl.cs" />
+     <Compile Include="Assets\Scripts\Eyes.cs" />
+     <Compile Include="Assets\Scripts\Helicopter.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <None Include="Assets\Assets\Toby Fredson\Rocky Hills Environment - Light Pack\RollerBall\RollerBallGuidelines.txt" />
+     <None Include="Assets\START PACK\Helicopter\Info.txt" />
      <None Include="Assets\Assets\low poly medieval buildings\readme.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
