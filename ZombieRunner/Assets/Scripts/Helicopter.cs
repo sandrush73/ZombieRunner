@@ -6,26 +6,20 @@ public class Helicopter : MonoBehaviour {
 
 	public bool calledHelo = false;
 
-	public AudioClip heloSound;
-	private AudioSource audioSource;
+
+	private Rigidbody rigidBody;
 
 	// Use this for initialization
 	void Start () {
 
-		audioSource = GetComponent<AudioSource> ();
+		rigidBody = GetComponent<Rigidbody> ();
 
-		
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-		if (Input.GetButtonDown ("Helio")) {
-			calledHelo = true;
+	public void OnDispatchHeli () {
+		calledHelo = true;
+		rigidBody.velocity = new Vector3 (0, 0, 50f);
 
-			audioSource.clip = heloSound;
-
-		}
-		
 	}
+
 }

@@ -6,20 +6,18 @@ public class ClearArea : MonoBehaviour {
 
 	public float timeSinceLastTrigger = 0f;
 
+	private bool foundClearArea = false ;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
 		timeSinceLastTrigger += Time.deltaTime;
 
-		if (timeSinceLastTrigger > 2f) {
+		if (timeSinceLastTrigger > 2f && Time.realtimeSinceStartup > 15f && !foundClearArea) {
 		
-			Debug.Log ("In a clear area");
+			SendMessageUpwards ("OnFindClearArea");  /// used to call function 
+			foundClearArea = true;
 			 
 		}
 	}
@@ -30,18 +28,6 @@ public class ClearArea : MonoBehaviour {
 		
 			timeSinceLastTrigger = 0f;
 		}
-	
-//		if (coll == null) {
-//		
-//		
-//			Debug.Log ("no collisisons detected");
-//		
-//		} else {
-//
-//			Debug.Log (coll.name);
-//			Debug.Log ("collisions Detected");
-//
-//		}
-//	
+
 	}
 }
