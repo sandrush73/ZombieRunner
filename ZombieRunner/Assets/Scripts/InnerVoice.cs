@@ -32,7 +32,7 @@ public class InnerVoice : MonoBehaviour {
 
 	void CallHeli () {
 	
-		SendMessageUpwards ("OnMakeInitialHeliCall");
+		SendMessageUpwards ("OnMakeInitialheliCall");
 	}
 
 	

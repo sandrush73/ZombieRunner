@@ -13,6 +13,12 @@ public class Player : MonoBehaviour {
 
 	private bool lastToggle = false;
 
+	public GameObject landingSiteDrop;
+
+	private Vector3 currentPlayerSite;
+
+
+
 
 
 	// Use this for initialization
@@ -29,7 +35,7 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		currentPlayerSite = this.transform.position;
 		if (lastToggle != timeToSpawn) {
 			RespanwPlayer ();
 			timeToSpawn = false;
@@ -55,6 +61,11 @@ public class Player : MonoBehaviour {
 	}
 
 	void DropFlair () {
+
+		Debug.Log ("flair Droped");
+
+
+		Instantiate (landingSiteDrop, currentPlayerSite, Quaternion.identity);
 	
 	
 	}
